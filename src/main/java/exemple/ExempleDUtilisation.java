@@ -4,11 +4,8 @@ import bandeau.Bandeau;
 import java.awt.Color;
 import java.awt.Font;
 
-public class ExempleDUtilisation {
-    
-    public static void main(String[] args) {
-	    new ExempleDUtilisation().exemple();
-    }
+
+    /*
     
     public void exemple() {
 	Bandeau monBandeau = new Bandeau();
@@ -58,4 +55,24 @@ public class ExempleDUtilisation {
 	monBandeau.sleep(3000);
 	monBandeau.close();
    }
+
+*/
+    public class ExempleDUtilisation {
+    
+    public static void main(String[] args) {
+        Bandeau test = new Bandeau();
+        
+        Scenario scenario1 = new Scenario(test);
+        scenario1.ajouterEffet(new Clignotant(2, test, "Ca clignote"));
+        scenario1.ajouterEffet(new Rotate (2, test, "Ca tourne"));
+        scenario1.ajouterEffet(new Zoom(2, test, "Ca zoome"));
+
+        scenario1.afficherScenario();
+
+        
+    
+    
+    }
+   
+    
 }
